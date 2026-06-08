@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bepn5jwypop6i"]
+
+[ext_resource type="Script" uid="uid://wfppbgqdri11" path="res://goal.gd" id="1_6k3qi"]
+[ext_resource type="Texture2D" uid="uid://ch1nix22018c0" path="res://pixilart-drawing.png" id="2_0qle8"]
+
+[node name="Goal" type="Area2D" unique_id=700244539]
+script = ExtResource("1_6k3qi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=481217490]
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=722324139]
+position = Vector2(194, 152)
+texture = ExtResource("2_0qle8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

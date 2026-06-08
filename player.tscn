@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b77casi7vbf3m"]
+
+[ext_resource type="Texture2D" uid="uid://bq4sjhnu58e4k" path="res://Screenshot_2026-05-27_092623-removebg-preview.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://csqs0cl5nieyj" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
+radius = 35.0
+height = 96.0
+
+[node name="Player" type="CharacterBody2D" unique_id=90875497]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2047383659]
+position = Vector2(179, 54.000008)
+scale = Vector2(0.5706897, 0.6191275)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=453991127]
+position = Vector2(182, 55)
+shape = SubResource("CapsuleShape2D_onrkg")
+debug_color = Color(0.8319668, 0.3578117, 0.42977083, 0.41960785)

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bj0k8diom8tmx"]
+
+[ext_resource type="Script" uid="uid://c6gdp828o8xvm" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b77casi7vbf3m" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://sg58njvlarxm" path="res://platform.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://mbqf81chuwwl" path="res://pixil-frame-0 (1).png" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bepn5jwypop6i" path="res://goal.tscn" id="5_lquwl"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+distance = -601.0
+
+[node name="Main" type="Node2D" unique_id=1992347198]
+position = Vector2(-1, 0)
+script = ExtResource("1_h2yge")
+metadata/_edit_horizontal_guides_ = [-736514.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2012255824]
+position = Vector2(11.890339, 384)
+scale = Vector2(1.1640397, 1.0194762)
+texture = ExtResource("2_1bvp3")
+offset = Vector2(487.82843, -71.65625)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1223841530]
+physics_material_override = SubResource("PhysicsMaterial_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=920314601]
+position = Vector2(0, -14)
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="Platform" parent="." unique_id=152475016 instance=ExtResource("2_0xm2m")]
+position = Vector2(7, 35)
+
+[node name="Platform2" parent="." unique_id=436304090 instance=ExtResource("2_0xm2m")]
+position = Vector2(323, 77)
+
+[node name="Platform3" parent="." unique_id=396216859 instance=ExtResource("2_0xm2m")]
+position = Vector2(698, 158)
+
+[node name="Platform4" parent="." unique_id=741861309 instance=ExtResource("2_0xm2m")]
+position = Vector2(523, 307)
+
+[node name="Platform5" parent="." unique_id=135074608 instance=ExtResource("2_0xm2m")]
+position = Vector2(102, 376)
+
+[node name="Player" parent="." unique_id=90875497 instance=ExtResource("1_ig7tw")]
+position = Vector2(-68, 464)
+
+[node name="Goal" parent="." unique_id=700244539 instance=ExtResource("5_lquwl")]
