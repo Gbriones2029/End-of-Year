@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://sg58njvlarxm" path="res://platform.tscn" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://mbqf81chuwwl" path="res://pixil-frame-0 (1).png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bepn5jwypop6i" path="res://goal.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://b5623br6ir5lm" path="res://character_body_2d.tscn" id="6_7mycd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
 
@@ -17,7 +18,7 @@ script = ExtResource("1_h2yge")
 metadata/_edit_horizontal_guides_ = [-736514.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2012255824]
-position = Vector2(11.890339, 384)
+position = Vector2(12.890338, 384.00003)
 scale = Vector2(1.1640397, 1.0194762)
 texture = ExtResource("2_1bvp3")
 offset = Vector2(487.82843, -71.65625)
@@ -48,3 +49,6 @@ position = Vector2(102, 376)
 position = Vector2(-68, 464)
 
 [node name="Goal" parent="." unique_id=700244539 instance=ExtResource("5_lquwl")]
+
+[node name="ENEMY" parent="." unique_id=603773050 instance=ExtResource("6_7mycd")]
+position = Vector2(488, 165)

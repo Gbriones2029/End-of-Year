@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dfxky0sl66yr3"]
+
+[ext_resource type="Script" uid="uid://cdyoeulj5hych" path="res://ws.gd" id="1_w5s6l"]
+
+[sub_resource type="Theme" id="Theme_m8odf"]
+
+[node name="LS" type="Control" unique_id=500935649]
+modulate = Color(0.7382987, 0.9273252, 0.95797795, 1)
+self_modulate = Color(0, 1, 1, 1)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1163.0
+offset_bottom = 652.0
+theme = SubResource("Theme_m8odf")
+script = ExtResource("1_w5s6l")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=124076862]
+color = Color(0.9900641, 0.27584738, 0.23000112, 1)
+polygon = PackedVector2Array(-79, -56, 1248, -60, 1251, 711, -115, 743)
+
+[node name="Label" type="Label" parent="." unique_id=1511142216]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 97.0
+offset_right = 798.0
+offset_bottom = 297.0
+theme_override_colors/font_color = Color(1, 0.66391736, 0.88740695, 1)
+theme_override_font_sizes/font_size = 100
+text = "You Lose"
+
+[node name="Button" type="Button" parent="." unique_id=307353714]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 399.0
+offset_right = 872.0
+offset_bottom = 544.0
+theme_override_colors/font_color = Color(0.99741393, 0.9882205, 0.9626158, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "Play Again
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

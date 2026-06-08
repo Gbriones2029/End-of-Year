@@ -3,13 +3,18 @@
 [ext_resource type="Script" uid="uid://wfppbgqdri11" path="res://goal.gd" id="1_6k3qi"]
 [ext_resource type="Texture2D" uid="uid://ch1nix22018c0" path="res://pixilart-drawing.png" id="2_0qle8"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qle8"]
+size = Vector2(69, 41)
+
 [node name="Goal" type="Area2D" unique_id=700244539]
 script = ExtResource("1_6k3qi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=481217490]
+position = Vector2(41, 31)
+shape = SubResource("RectangleShape2D_0qle8")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=722324139]
-position = Vector2(194, 152)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=722324139]
+position = Vector2(43, 42)
 texture = ExtResource("2_0qle8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
